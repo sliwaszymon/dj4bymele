@@ -22,9 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
+# SECRET_KEY = 'django-insecure-wpk2^xc$#(*!-^@li&i)xch5zvjrr^o$e!qoo8r4jf13*y$jx!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ['DEBUG'] == 'True'
+
+# DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -39,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'taggit',
 ]
 
 MIDDLEWARE = [
